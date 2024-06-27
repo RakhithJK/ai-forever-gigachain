@@ -28,6 +28,10 @@ extras = ["pdf"]
 poethepoet = "^0.24.1"
 gigachain-cli = ">=0.0.21"
 
+[tool.gigaserve]
+export_module = "rag_redis.chain"
+export_attr = "chain"
+
 [tool.templates-hub]
 use-case = "rag"
 author = "Redis"
@@ -35,7 +39,7 @@ integrations = ["OpenAI", "Redis", "HuggingFace"]
 tags = ["vectordbs"]
 
 [tool.poe.tasks.start]
-cmd = "uvicorn gigachain_cli.dev_scripts:create_demo_server --reload --port $port --host $host"
+cmd = "uvicorn langchain_cli.dev_scripts:create_demo_server --reload --port $port --host $host"
 args = [
     { name = "port", help = "port to run on", default = "8000" },
     { name = "host", help = "host to run on", default = "127.0.0.1" },

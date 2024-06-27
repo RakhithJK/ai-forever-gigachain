@@ -16,7 +16,7 @@ neo4j = "^5.14.0"
 [tool.poetry.group.dev.dependencies]
 gigachain-cli = ">=0.0.21"
 
-[tool.langserve]
+[tool.gigaserve]
 export_module = "neo4j_semantic_layer"
 export_attr = "agent_executor"
 

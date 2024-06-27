@@ -7,11 +7,11 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.8.1,<4.0"
-gigachain = ">=0.0.325"
+gigachain = "^0.1"
 openai = "<2"
 chromadb = "^0.4.15"
 tiktoken = "^0.5.1"
-langchain-text-splitters = ">=0.0.1,<0.1"
+gigachain-text-splitters = ">=0.0.1,<0.1"
 
 [tool.poetry.group.dev.dependencies]
 poethepoet = "^0.24.1"
@@ -30,7 +30,7 @@ integrations = ["OpenAI", "ChromaDB"]
 tags = ["paper"]
 
 [tool.poe.tasks.start]
-cmd = "uvicorn gigachain_cli.dev_scripts:create_demo_server --reload --port $port --host $host"
+cmd = "uvicorn langchain_cli.dev_scripts:create_demo_server --reload --port $port --host $host"
 args = [
     { name = "port", help = "port to run on", default = "8000" },
     { name = "host", help = "host to run on", default = "127.0.0.1" },

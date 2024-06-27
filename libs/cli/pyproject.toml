@@ -1,15 +1,11 @@
 [tool.poetry]
 name = "gigachain-cli"
-version = "0.0.22"
-description = "CLI for interacting with gigachain"
+version = "0.0.25"
+description = "CLI for interacting with Gigachain"
 authors = ["Erick Friis <erick@langchain.dev>"]
 readme = "README.md"
 repository = "https://github.com/langchain-ai/langchain"
 license = "MIT"
-packages = [
-    {include = "langchain_cli"}
-]
-
 
 [tool.poetry.urls]
 "Source Code" = "https://github.com/langchain-ai/langchain/tree/master/libs/cli"
@@ -42,7 +38,7 @@ ruff = "^0.1.5"
 [tool.poetry.group.test_integration.dependencies]
 
 [tool.poetry.extras]
-# For langserve
+# For gigaserve
 serve = []
 
 [tool.ruff.lint]
@@ -59,7 +55,7 @@ watch = "poetry run ptw"
 version = "poetry version --short"
 bump = ["_bump_1", "_bump_2"]
 lint = ["_lint", "_check_formatting"]
-format = ["_lint_fix", "_format"]
+format = ["_format", "_lint_fix"]
 
 _bump_2.shell = """sed -i "" "/^__version__ =/c\\ \n__version__ = \\"$version\\"\n" langchain_cli/cli.py"""
 _bump_2.uses = { version = "version" }

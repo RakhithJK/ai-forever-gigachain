@@ -21,7 +21,7 @@ bs4 = "^0.0.1"
 [tool.poetry.group.dev.dependencies]
 gigachain-cli = ">=0.0.21"
 
-[tool.langserve]
+[tool.gigaserve]
 export_module = "openai_functions_agent"
 export_attr = "agent_executor"
 

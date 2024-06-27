@@ -19,7 +19,7 @@ gigachain-cli = ">=0.0.21"
 fastapi = ">=0.104.0,<1"
 sse-starlette = "^1.6.5"
 
-[tool.langserve]
+[tool.gigaserve]
 export_module = "rag_lancedb"
 export_attr = "chain"
 

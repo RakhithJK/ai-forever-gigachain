@@ -6,14 +6,14 @@ authors = ["JGalego <jgalego1990@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.10, <4.0"
+python = "^3.11"
 uvicorn = "^0.23.2"
-langserve = {extras = ["server"], version = ">=0.0.30"}
+gigaserve = {extras = ["server"], version = ">=0.0.30"}
 pydantic = "<2"
 boto3 = "^1.33.10"
 gigachain = "^0.1"
 
-[tool.langserve]
+[tool.gigaserve]
 export_module = "bedrock_jcvd.chain"
 export_attr = "chain"
 
@@ -25,3 +25,7 @@ tags = ["conversation"]
 
 [tool.poetry.group.dev.dependencies]
 gigachain-cli = ">=0.0.21"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

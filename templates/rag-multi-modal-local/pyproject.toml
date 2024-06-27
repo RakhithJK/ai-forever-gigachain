@@ -9,7 +9,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.8.1,<4.0"
-gigachain = ">=0.0.351"
+gigachain = ">=0.0.353,<0.2"
 openai = "<2"
 tiktoken = ">=0.5.1"
 chromadb = ">=0.4.14"
@@ -21,7 +21,7 @@ gigachain-community = ">=0.0.4"
 [tool.poetry.group.dev.dependencies]
 gigachain-cli = ">=0.0.21"
 
-[tool.langserve]
+[tool.gigaserve]
 export_module = "rag_multi_modal_local"
 export_attr = "chain"
 

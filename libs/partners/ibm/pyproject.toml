@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "langchain-ibm"
+name = "gigachain-ibm"
 version = "0.1.7"
-description = "An integration package connecting IBM watsonx.ai and LangChain"
+description = "An integration package connecting IBM watsonx.ai and Gigachain"
 authors = ["IBM"]
 readme = "README.md"
 repository = "https://github.com/langchain-ai/langchain"

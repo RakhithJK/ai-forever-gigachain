@@ -14,12 +14,12 @@ openai = "<2"
 tiktoken = ">=0.5.1"
 chromadb = ">=0.4.14"
 bs4 = "^0.0.1"
-langchain-text-splitters = ">=0.0.1,<0.1"
+gigachain-text-splitters = ">=0.0.1,<0.1"
 
 [tool.poetry.group.dev.dependencies]
 gigachain-cli = ">=0.0.21"
 
-[tool.langserve]
+[tool.gigaserve]
 export_module = "rag_chroma_multi_modal_multi_vector"
 export_attr = "chain"
 
